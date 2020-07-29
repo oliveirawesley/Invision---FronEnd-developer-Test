@@ -1,0 +1,60 @@
+@import '../../styles/main.scss';
+
+.signin{  
+    @media #{$mq-mobile} {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
+        .leftSide, .rightSide {
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            &.leftSide {
+                display: none;
+                align-items: center;
+                background: map-get($colors, olive );
+            }
+
+            &.rightSide{
+                flex-direction: column;
+                align-items: center;
+                background: map-get($colors, light );
+
+                .logo{
+                    display: flex;
+                    justify-content: center;
+                    padding: 40px 0;
+                    width: 100%;
+
+                    h1{
+                        font-size: 30px;
+                        font-family: 'multi-bold';
+                    }
+                }
+                
+                h2{
+                    color: map-get($colors, darkGrey );
+                    font-family: 'multi-light';
+                }   
+            }
+        }
+    }
+
+    @media #{$mq-tablet} {
+        .leftSide{
+            display: flex !important;
+        }
+    }
+
+    @media #{$mq-desktop} {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media #{$mq-monitor} {
+        display: flex;
+        flex-direction: row;
+    }
+}

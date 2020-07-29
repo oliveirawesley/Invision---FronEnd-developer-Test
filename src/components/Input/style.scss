@@ -1,0 +1,11 @@
+@import '../../styles/main.scss';
+
+.inputError{
+    transition: .3s all;
+    border-bottom-color: map-get($colors, danger ) !important;
+}
+
+.errorMessage{
+    color: map-get($colors, danger );
+    font-size: 12px;
+}

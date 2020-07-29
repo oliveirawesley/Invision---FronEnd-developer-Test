@@ -1,0 +1,38 @@
+@import './fonts';
+@import './colors';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'multi';
+}
+
+body::-webkit-scrollbar-track {
+	border-radius: 1px;
+	background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar {
+	width: 7px;
+	background-color: map-get($colors, olive);
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 1px;
+	background-color: map-get($colors, olive);
+}
+
+.dot.selected{
+    padding: 0 .55rem;
+    border-radius: 4px !important;
+}
+
+.dot{
+    border: none !important;
+    box-shadow: none !important;
+}

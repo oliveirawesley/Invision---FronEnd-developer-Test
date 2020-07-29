@@ -1,0 +1,140 @@
+@import '../../styles/main.scss';
+
+.signupForm {
+    @media #{$mq-mobile} {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 40px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+
+            .submitBtn{
+                background: map-get($colors, darkGrey );
+                color: map-get($colors, light );
+                border-radius: 25px;
+                margin: 1rem auto;
+                height: 45px;
+                width: 175px;
+                transition: .5s all;
+                cursor: pointer;
+
+                &:hover{
+                    transition: .5s all;
+                    transform: scale(1.025);
+                }
+
+                &.sending{
+                    width: 50px;
+                    opacity: .5;
+                    cursor: not-allowed;
+                }
+            }
+
+            .dividerArea{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0;
+
+                .divider{
+                    border-bottom: 1.2px solid map-get($colors, lightGrey );
+                    width: 50%;
+                    margin: 0 1rem;
+                }
+
+                span{
+                    font-family: 'multi-light';
+                    font-size: 12px;
+                }
+            }
+
+            .googleBtn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                border-radius: 25px;
+                border: 1px solid rgba(0,0,0,.05);
+                box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+                height: 45px;
+                width: 263px;
+                margin: 1rem auto;
+                transition: .3s all;
+                cursor: pointer;
+
+                &:hover{
+                    transition: .5s all;
+                    transform: scale(1.025);
+                }
+
+                .googleLogo{
+                    height: 29px;
+                    width: 29px;
+                    margin: 0 1rem;
+                }
+            }
+
+            .field{
+                margin: 0 0 .75rem 0;
+            }
+
+            .aditionalInfos{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem 0;
+
+                a{
+                    color: map-get($colors, olive );
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                b{
+                    font-family: 'multi-bold';
+                }
+
+                small{
+                    &:nth-child(2){
+                        margin: 0 0 1rem 0;
+                    }
+                }
+            }
+
+            input {
+                border-bottom: 1px solid;
+                padding: .25rem 1rem;
+                width: 100%;
+                transition: .2s all;
+
+                &:focus {
+                    border-bottom: 2px solid map-get($colors, olive);
+                    transition: .2s all;
+                }
+            }
+
+            small, .forgotPass {
+                font-family: 'multi-light';
+                color: map-get($colors, darkGrey);
+                font-size: 12px;
+
+                &.forgotPass{
+                    text-align: right;
+                    margin: .5rem 0 1rem 0;
+                    transition: .2s all;
+                    cursor: pointer;
+
+                    &:hover{
+                        transition: .2s all;
+                        text-decoration: underline;
+                        color: map-get($colors, olive );
+                    }
+                }
+            }  
+        }
+    }
+}
